@@ -108,12 +108,12 @@ h3 {
 {
   "en": {
     "married": "are getting married!",
-    "introText": "Kimberly and Julien met in 2003 at school. They randomly started saying “hi” to each other for no reason. Later, they became friends and shared many great moments. On February 21st 2015 their love story started. Now they are getting married and they will begin the next chapter of their lives! They are looking forward to celebrating their love with you - family and friends.",
+    "introText": "Kimberly and Julien met in 2003 at school. They became friends and shared many great moments. On February 21st 2015 their love story started. Now they are getting married and they will begin the next chapter of their lives! They are looking forward to celebrating their love with you - family and friends.",
     "introText2": "So please come join them on this wonderful day!"
   },
   "fr": {
     "married": "se marient!",
-    "introText": "Kimberly et Julien se sont rencontrés au Gymnase de Bulle en 2003. Un jour, ils ont commencé à se dire “salut” dans les couloirs, sans aucune raison valable, juste parce que. Plus tard, leurs groupes d’amis fusionnent et ils deviennent amis. Le 21 février 2015, ils débutent leur histoire d’amour. Aujourd’hui ils se marient et ils vont ouvrir un nouveau chapitre dans leurs vies! Ils se réjouissent de célébrer leur amour avec vous - famille et amis.",
+    "introText": "Kimberly et Julien se sont rencontrés au Gymnase de Bulle en 2003. Sans aucune raison valable, juste parce que. Plus tard, leurs groupes d’amis fusionnent et ils deviennent amis. Le 21 février 2015, ils débutent leur histoire d’amour. Aujourd’hui ils se marient et ils vont ouvrir un nouveau chapitre dans leurs vies! Ils se réjouissent de célébrer leur amour avec vous - famille et amis.",
     "introText2": "Alors venez célébrer cette journée magique avec eux!"
   }
 }
