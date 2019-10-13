@@ -5,6 +5,12 @@
 npm install
 ```
 
+### Using vue-ui
+```
+vue ui
+```
+and visit localhost:8000
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
@@ -18,11 +24,6 @@ npm run build
 ### Run your tests
 ```
 npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
 
 ### Customize configuration
