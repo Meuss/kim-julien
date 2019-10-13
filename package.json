@@ -5,14 +5,19 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "gsap": "^2.1.3",
     "vue": "^2.6.10",
+    "vue-i18n": "^8.0.0",
+    "vue-scroll-reveal": "^1.0.11",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.3.0",
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
@@ -24,6 +29,7 @@
     "node-sass": "^4.9.0",
     "prettier": "^1.18.2",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-i18n": "^0.6.0",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -35,7 +41,9 @@
       "plugin:vue/essential",
       "@vue/prettier"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
@@ -44,6 +52,12 @@
     "plugins": {
       "autoprefixer": {}
     }
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "printWidth": 180,
+    "semi": true,
+    "singleQuote": true
   },
   "browserslist": [
     "> 1%",

@@ -1,0 +1,98 @@
+// =====================================================
+// Fonts declaration
+// =====================================================
+@mixin font-fancy() {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+}
+@mixin font-light() {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+@mixin font-regular() {
+  font-family: 'Montserrat', 'Avenir', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font-p() {
+  color: $darkgreen;
+  @include font-regular();
+  font-size: 20px;
+  line-height: 27px;
+}
+// =====================================================
+// Applying fonts
+// =====================================================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+h1, h2, h5 {
+  @include font-fancy();
+  text-align: center;
+}
+h1 {
+  font-size: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @include sm {
+    font-size: 70px;
+  }
+  @include xs {
+    font-size: 45px;
+  }
+}
+h2 {
+  color: $darkgreen;
+  margin-top: 100px;
+  margin-bottom: 0;
+  font-size: 70px;
+  @include sm {
+    font-size: 60px;
+  }
+  @include xs {
+    font-size: 45px;
+  }
+}
+h5 {
+  font-size: 30px;
+  @include xs {
+    font-size: 25px;
+  }
+}
+h3, h6 {
+  @include font-regular();
+}
+h4 {
+  @include font-fancy();
+  border-top: 1px solid $darkgreen;
+  display: inline-block;
+  padding-top: 10px;
+  color: $darkgreen;
+  font-size: 30px;
+  @include xs {
+    font-size: 25px;
+  }
+}
+p, ul {
+  @include font-p();
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted $darkgreen;
+  color: $green;
+  background-size: 200%;
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, lighten($darkgreen, 15%) 50%);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  &:hover {
+    color: white;
+    background-position: -100% 0;
+  }
+}

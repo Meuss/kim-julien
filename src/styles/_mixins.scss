@@ -1,0 +1,38 @@
+$darkgreen: #1e4d29;
+$green: #4d6e51;
+$gray: #c0c0c0;
+$lightgray: #e8e7ec;
+$white: #fff;
+$black: #181818;
+
+
+@mixin xxl() {
+  @media (min-width: 1921px) {
+    @content;
+  }
+}
+@mixin xl() {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+@mixin lg() {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+@mixin md() {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin sm() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin xs() {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
