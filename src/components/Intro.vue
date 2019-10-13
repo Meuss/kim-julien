@@ -55,18 +55,23 @@ export default {
 
 <style scoped lang="scss">
 .header-bg {
-  height: 75vh;
+  height: 650px;
   margin-bottom: 100px;
   background-size: cover;
   background-position: center center;
-  @include md {
+  transition: height 0.3s ease;
+  @include lg {
     height: 500px;
+  }
+  @include md {
+    height: 400px;
   }
   @include sm {
     height: 400px;
   }
   @include xs {
-    height: 300px;
+    height: 250px;
+    margin-bottom: 60px;
   }
 }
 h1,
@@ -101,6 +106,9 @@ h3 {
   .active {
     display: none;
   }
+}
+p {
+  text-align: center;
 }
 </style>
 

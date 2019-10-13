@@ -63,6 +63,10 @@ export default {
   @include lg {
     max-width: 85%;
   }
+  @include md {
+    max-width: 90%;
+    padding: 40px 60px;
+  }
   @include sm {
     max-width: none;
     padding: 20px;
@@ -70,14 +74,59 @@ export default {
 }
 .allsaints-img,
 .colombette-img {
-  height: 300px;
+  height: 400px;
   background-size: cover;
   background-position: center center;
   margin-bottom: 30px;
+  @include lg {
+    height: 300px;
+  }
+  @include xs {
+    height: 250px;
+  }
 }
 .infos {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    @include md {
+      width: 60%;
+    }
+    @include sm {
+      width: auto;
+      flex-direction: column;
+    }
+  }
+  @include xs {
+    flex-direction: column;
+  }
+}
+.time,
+.parking {
+  padding-left: 30px;
+  background-size: 20px 20px;
+  background-position: 1px 50%;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+.time {
+  background-image: url('./assets/clock.svg');
+}
+.parking {
+  background-image: url('./assets/parking.svg');
+}
+.gmap {
+  display: flex;
+  align-items: center;
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
 }
 #mediaqueries {
   pointer-events: none;

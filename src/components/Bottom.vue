@@ -14,7 +14,7 @@
       <li>Becky ({{ $t('mother') }}): 077 480 35 12</li>
       <li>Ruth ({{ $t('mother2') }}): 079 388 09 31</li>
     </ul>
-    <p v-scroll-reveal>{{ $t('looking') }}<br />{{ $t('kimjulien') }}</p>
+    <p class="center" v-scroll-reveal>{{ $t('looking') }}<br />{{ $t('kimjulien') }}</p>
   </div>
 </template>
 
@@ -24,7 +24,12 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.center {
+  text-align: center;
+  margin-top: 50px;
+}
+</style>
 
 <i18n>
 {
