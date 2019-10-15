@@ -183,7 +183,7 @@
       >.
     </p>
     <p v-scroll-reveal>
-      {{ $t('pictures') }} <a href="https://www.dropbox.com/request/ozAMX4C6cXd6eg6CUhUA">{{ $t('here') }}</a
+      {{ $t('pictures') }} <a href="https://www.dropbox.com/request/ozAMX4C6cXd6eg6CUhUA" target="_blank">{{ $t('here') }}</a
       >.
     </p>
   </div>
