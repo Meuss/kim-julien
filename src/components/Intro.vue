@@ -121,7 +121,7 @@ p {
   },
   "fr": {
     "married": "se marient!",
-    "introText": "Kimberly et Julien se sont rencontrés au Gymnase de Bulle en 2003. Sans aucune raison valable, juste parce que. Plus tard, leurs groupes d’amis fusionnent et ils deviennent amis. Le 21 février 2015, ils débutent leur histoire d’amour. Aujourd’hui ils se marient et ils vont ouvrir un nouveau chapitre dans leurs vies! Ils se réjouissent de célébrer leur amour avec vous - famille et amis.",
+    "introText": "Kimberly et Julien se sont rencontrés au Gymnase de Bulle en 2003. Leurs groupes de copains fusionnent et ils deviennent amis. Le 21 février 2015, ils débutent leur histoire d’amour. Aujourd’hui ils se marient et ils vont ouvrir un nouveau chapitre dans leurs vies! Ils se réjouissent de célébrer leur amour avec vous - famille et amis.",
     "introText2": "Alors venez célébrer cette journée magique avec eux!"
   }
 }
