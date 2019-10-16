@@ -35,7 +35,7 @@ export default {
 {
   "en": {
     "gifts": "Gifts",
-    "description": "There is no gift registry. As we have been living together for a while, we are not in need of anything in particular. We would appreciate any contribution to the wedding/honeymoon costs.",
+    "description": "There is no gift registry. We would appreciate any contribution to the wedding/honeymoon costs.",
     "cardbox": "If you would like to offer a gift, a cardbox will be available at the wedding for you to put your kind wishes.",
     "iban": "You may also send to Kimberly Wälti, IBAN CH79 0483 5068 1373 0000 0",
     "bestman": "Best Man",
@@ -47,7 +47,7 @@ export default {
   },
   "fr": {
     "gifts": "Cadeaux",
-    "description": "Il n’y a pas de liste de cadeaux. Comme ça fait longtemps que nous vivons ensemble, nous avons les nécessités de base. Nous serions reconnaissants pour toute participation financière au mariage/voyage de noce.",
+    "description": "Il n’y a pas de liste de cadeaux. Nous serions reconnaissants pour toute participation financière au mariage/voyage de noce.",
     "cardbox": "Si vous souhaitez, il y aura une boîte pour y déposer vos voeux.",
     "iban": "Vous pouvez également envoyer à Kimberly Wälti, IBAN CH79 0483 5068 1373 0000 0",
     "bestman": "Témoin",
