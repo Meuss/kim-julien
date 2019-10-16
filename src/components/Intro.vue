@@ -1,36 +1,45 @@
 <template>
   <div>
-    <div v-scroll-reveal>
-      <div class="header-bg"></div>
+    <div class="smiles">
+      <img :class="{ loading: loading }" src="https://res.cloudinary.com/dljgq8ek2/image/upload/w_500,f_auto,dpr_2/kim-julien/smile-edited.jpg" alt="kim and julien" />
     </div>
-    <h1 v-scroll-reveal>Kim & Julien</h1>
-    <h3 v-scroll-reveal class="subtitle">{{ $t('married') }}</h3>
-    <h3 v-scroll-reveal class="date">06.06.2020</h3>
-    <p class="change-lang" v-scroll-reveal>
+    <h1 :class="{ loading: initialLoad }">Kim & Julien</h1>
+    <h3 class="subtitle" :class="{ loading: initialLoad }">{{ $t('married') }}</h3>
+    <h3 class="date" :class="{ loading: initialLoad }">06.06.2020</h3>
+    <p class="change-lang" :class="{ loading: initialLoad }">
       <a href="javascript:void(0)" @click="switchLang('fr')" :class="{ active: $i18n.locale === 'fr' }">Français</a>
       <a href="javascript:void(0)" @click="switchLang('en')" :class="{ active: $i18n.locale === 'en' }">English</a>
     </p>
-    <p v-scroll-reveal>{{ $t('introText') }}</p>
-    <p v-scroll-reveal>{{ $t('introText2') }}</p>
+    <p :class="{ loading: initialLoad }">{{ $t('introText') }}</p>
+    <p :class="{ loading: initialLoad }">{{ $t('introText2') }}</p>
   </div>
 </template>
 
 <script>
 import { TimelineLite } from 'gsap';
-import imageSizes from '@/mixins/imageSizes';
 
 export default {
   name: 'Intro',
-  mixins: [imageSizes],
   data() {
     return {
       langs: ['en', 'fr'],
+      loading: true,
+      initialLoad: true,
     };
   },
   mounted() {
-    this.getHeaderImage('.header-bg', 'header-edited.jpg');
+    const that = this;
+    setTimeout(() => {
+      that.loading = false;
+    }, 500);
+    setTimeout(() => {
+      that.doFirstAnimation();
+    }, 3000);
   },
   methods: {
+    doFirstAnimation() {
+      this.initialLoad = false;
+    },
     switchLang(lang) {
       const tl = new TimelineLite();
       const that = this;
@@ -54,25 +63,26 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.header-bg {
-  height: 650px;
-  margin-bottom: 100px;
-  background-size: cover;
-  background-position: center center;
-  transition: height 0.3s ease;
-  @include lg {
-    height: 500px;
-  }
-  @include md {
-    height: 400px;
-  }
-  @include sm {
-    height: 400px;
-  }
-  @include xs {
-    height: 250px;
-    margin-bottom: 60px;
-  }
+img,
+h1,
+h3,
+p {
+  transition: opacity 1s ease;
+}
+.loading {
+  opacity: 0;
+}
+.smiles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+  width: 300px;
+  border-radius: 50%;
+  margin: 50px auto 100px auto;
 }
 h1,
 h3 {

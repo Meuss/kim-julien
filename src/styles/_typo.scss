@@ -101,9 +101,10 @@ ul {
 a {
   text-decoration: none;
   border-bottom: 1px dotted $darkgreen;
-  color: $green;
+  // color: $green;
+  color: $darkgreen;
   background-size: 200%;
-  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, $darkgreen 50%);
+  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, $green 50%);
   transition: all 0.3s cubic-bezier(.64,.09,.08,1);
   &:hover {
     color: white;

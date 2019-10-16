@@ -1,6 +1,6 @@
 export default {
   methods: {
-    getHeaderImage(target, imageName) {
+    getBGImage(target, imageName) {
       const image = document.querySelector(target);
       let desiredSize = Math.ceil(window.innerWidth);
       let imageSize;

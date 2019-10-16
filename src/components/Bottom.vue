@@ -15,12 +15,21 @@
       <li>Ruth ({{ $t('mother2') }}): 079 388 09 31</li>
     </ul>
     <p class="center" v-scroll-reveal>{{ $t('looking') }}<br />{{ $t('kimjulien') }}</p>
+    <div v-scroll-reveal>
+      <div class="footer-bg"></div>
+    </div>
   </div>
 </template>
 
 <script>
+import imageSizes from '@/mixins/imageSizes';
+
 export default {
   name: 'Bottom',
+  mixins: [imageSizes],
+  mounted() {
+    this.getBGImage('.footer-bg', 'header-edited.jpg');
+  },
 };
 </script>
 
@@ -28,6 +37,26 @@ export default {
 .center {
   text-align: center;
   margin-top: 50px;
+}
+.footer-bg {
+  height: 650px;
+  margin-top: 50px;
+  background-size: cover;
+  background-position: center center;
+  transition: height 0.5s ease;
+  @include lg {
+    height: 500px;
+  }
+  @include md {
+    height: 400px;
+  }
+  @include sm {
+    height: 400px;
+  }
+  @include xs {
+    height: 250px;
+    margin-top: 60px;
+  }
 }
 </style>
 

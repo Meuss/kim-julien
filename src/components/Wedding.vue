@@ -152,7 +152,7 @@ export default {
     return {};
   },
   mounted() {
-    this.getHeaderImage('.allsaints-img', 'church.jpg');
+    this.getBGImage('.allsaints-img', 'church.jpg');
   },
 };
 </script>

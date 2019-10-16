@@ -203,7 +203,7 @@ export default {
     return {};
   },
   mounted() {
-    this.getHeaderImage('.colombette-img', 'colombettes.jpg');
+    this.getBGImage('.colombette-img', 'colombettes.jpg');
   },
 };
 </script>

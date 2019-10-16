@@ -28,7 +28,7 @@ export default {
     Bottom,
   },
   mounted() {
-    this.getHeaderImage('.bg-image', 'flowers.jpg');
+    this.getBGImage('.bg-image', 'flowers.jpg');
   },
 };
 </script>
