@@ -79,6 +79,7 @@ p {
   align-items: center;
 }
 img {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   max-width: 100%;
   width: 300px;
   border-radius: 50%;
