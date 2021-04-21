@@ -5,7 +5,7 @@
     </div>
     <h1 :class="{ loading: initialLoad }">Kim & Julien</h1>
     <h3 class="subtitle" :class="{ loading: initialLoad }">{{ $t('married') }}</h3>
-    <h3 class="date" :class="{ loading: initialLoad }">03.07.2021</h3>
+    <h3 class="date" :class="{ loading: initialLoad }">{{ $t('thedate') }}</h3>
     <p class="change-lang" :class="{ loading: initialLoad }">
       <a href="javascript:void(0)" @click="switchLang('fr')" :class="{ active: $i18n.locale === 'fr' }">Français</a>
       <a href="javascript:void(0)" @click="switchLang('en')" :class="{ active: $i18n.locale === 'en' }">English</a>
@@ -107,6 +107,7 @@ h3 {
   }
 }
 .date {
+  text-transform: none;
   font-size: 55px;
   @include sm {
     font-size: 45px;
@@ -130,11 +131,13 @@ p {
 {
   "en": {
     "married": "are getting married!",
+    "thedate": "July 3rd, 2021",
     "introText": "Kimberly and Julien met in 2003 at school. They became friends and shared many great moments. On February 21st 2015 their love story started. Now they are getting married and they will begin the next chapter of their lives! They are looking forward to celebrating their love with you - family and friends.",
     "introText2": "So please come join them on this wonderful day!"
   },
   "fr": {
     "married": "se marient!",
+    "thedate": "03.07.2021",
     "introText": "Kimberly et Julien se sont rencontrés au Gymnase de Bulle en 2003. Leurs groupes de copains fusionnent et ils deviennent amis. Le 21 février 2015, ils débutent leur histoire d’amour. Aujourd’hui ils se marient et ils vont ouvrir un nouveau chapitre dans leurs vies! Ils se réjouissent de célébrer leur amour avec vous - famille et amis.",
     "introText2": "Alors venez célébrer cette journée magique avec eux!"
   }
