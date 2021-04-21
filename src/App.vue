@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <IntroPlaceholder />
-      <!-- <Intro /> -->
-      <!-- <Wedding /> -->
-      <!-- <Reception /> -->
-      <!-- <Bottom /> -->
+      <!-- <IntroPlaceholder /> -->
+      <Intro />
+      <Wedding />
+      <Reception />
+      <Bottom />
     </div>
     <div class="bg-image"></div>
     <div id="mediaqueries"></div>
@@ -13,22 +13,22 @@
 </template>
 
 <script>
-import IntroPlaceholder from './components/IntroPlaceholder.vue';
-// import Intro from './components/Intro.vue';
-// import Wedding from './components/Wedding.vue';
-// import Reception from './components/Reception.vue';
-// import Bottom from './components/Bottom.vue';
+// import IntroPlaceholder from './components/IntroPlaceholder.vue';
+import Intro from './components/Intro.vue';
+import Wedding from './components/Wedding.vue';
+import Reception from './components/Reception.vue';
+import Bottom from './components/Bottom.vue';
 import imageSizes from '@/mixins/imageSizes';
 
 export default {
   name: 'app',
   mixins: [imageSizes],
   components: {
-    IntroPlaceholder,
-    // Intro,
-    // Wedding,
-    // Reception,
-    // Bottom,
+    // IntroPlaceholder,
+    Intro,
+    Wedding,
+    Reception,
+    Bottom,
   },
   mounted() {
     this.getBGImage('.bg-image', 'flowers.jpg');

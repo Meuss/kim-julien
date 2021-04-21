@@ -5,7 +5,7 @@
     </div>
     <h1 :class="{ loading: initialLoad }">Kim & Julien</h1>
     <h3 class="subtitle" :class="{ loading: initialLoad }">{{ $t('married') }}</h3>
-    <h3 class="date" :class="{ loading: initialLoad }">06.06.2020</h3>
+    <h3 class="date" :class="{ loading: initialLoad }">03.07.2021</h3>
     <p class="change-lang" :class="{ loading: initialLoad }">
       <a href="javascript:void(0)" @click="switchLang('fr')" :class="{ active: $i18n.locale === 'fr' }">Français</a>
       <a href="javascript:void(0)" @click="switchLang('en')" :class="{ active: $i18n.locale === 'en' }">English</a>
@@ -28,13 +28,12 @@ export default {
     };
   },
   mounted() {
-    const that = this;
     setTimeout(() => {
-      that.loading = false;
+      this.loading = false;
     }, 500);
     setTimeout(() => {
-      that.doFirstAnimation();
-    }, 3000);
+      this.doFirstAnimation();
+    }, 1000);
   },
   methods: {
     doFirstAnimation() {
@@ -84,6 +83,10 @@ img {
   width: 300px;
   border-radius: 50%;
   margin: 50px auto 100px auto;
+  @include xs {
+    width: 200px;
+    margin: 50px auto 70px auto;
+  }
 }
 h1,
 h3 {
