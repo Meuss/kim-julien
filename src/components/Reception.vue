@@ -1,6 +1,9 @@
 <template>
   <div>
     <h2 v-scroll-reveal>{{ $t('reception') }}</h2>
+    <div class="warning">
+      <h2 style="margin-top: 0;">{{ $t('to-be-confirmed') }}</h2>
+    </div>
     <h5 v-scroll-reveal>{{ $t('upon') }}</h5>
     <Flowers v-scroll-reveal />
     <div v-scroll-reveal>
@@ -209,6 +212,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.warning {
+  background-color: #d24679;
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  padding: 15px;
+  margin: 15px 0 20px;
+  h2 {
+    color: #fff;
+    font-size: 50px;
+  }
+  @include xs {
+    padding: 15px 10px;
+    h2 {
+      font-size: 40px;
+    }
+  }
+}
 h5 {
   margin-bottom: 0;
   color: $green;
@@ -229,7 +249,8 @@ h5 {
     "drinkanddrive": "Do not drink and drive! Eat, drink and be merry and then",
     "taxi": "call a taxi",
     "pictures": "We want to remember this day, so please share your pictures (even the crazy ones) with us. Upload them",
-    "here": "here"
+    "here": "here",
+    "to-be-confirmed": "Reception to be confirmed. We await the next Covid restrictions announcement..."
     },
   "fr": {
     "reception": "Réception",
@@ -243,7 +264,8 @@ h5 {
     "drinkanddrive": "Pas de risque, pas d’accident. Ne prenez pas le volant et",
     "taxi": "appelez un taxi",
     "pictures": "On veut un max de souvenirs de cette journée alors vous pouvez partager vos photos (même les photos un peu folles/ratées) avec",
-    "here": "ce lien"
+    "here": "ce lien",
+    "to-be-confirmed": "Réception à confirmer suivant les prochaines mesures sanitaires..."
   }
 }
 </i18n>
