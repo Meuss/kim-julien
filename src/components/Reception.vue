@@ -1,9 +1,9 @@
 <template>
   <div>
     <h2 v-scroll-reveal>{{ $t('reception') }}</h2>
-    <div class="warning">
+    <!-- <div class="warning">
       <h2 style="margin-top: 0;">{{ $t('to-be-confirmed') }}</h2>
-    </div>
+    </div> -->
     <h5 v-scroll-reveal>{{ $t('upon') }}</h5>
     <Flowers v-scroll-reveal />
     <div v-scroll-reveal>
