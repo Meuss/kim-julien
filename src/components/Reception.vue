@@ -179,10 +179,7 @@
     </ul>
     <p v-scroll-reveal>
       {{ $t('drinkanddrive') }}
-      <a
-        href="https://www.google.com/search?sxsrf=ACYBGNSrS3Z1iKVUyXopQP07FjZJ38s3zg:1570975583247&q=taxis+bulle&npsic=0&rflfq=1&rlha=0&rllag=46614112,7049564,914&tbm=lcl&ved=2ahUKEwiFidyMtJnlAhWHb1AKHaZOCHcQjGp6BAgKEDg&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e2!2m1!1e16!3sIAE,lf:1,lf_ui:1&rldoc=1#rlfi=hd:;si:;mv:[[46.66564928661431,7.166394124267526],[46.57120636521009,6.908902058837839]]"
-        target="_blank"
-        >{{ $t('taxi') }}</a
+      <a href="tel:+41269122121">{{ $t('taxi') }}</a
       >.
     </p>
     <p v-scroll-reveal>
@@ -246,8 +243,8 @@ h5 {
     "description": "We will enjoy a meal and a fun evening together. Feel free to wear comfortable clothes, so you can party! The restaurant closes at 3 AM and there are unfortunately no rooms on site. You will need to organize your sleeping arrangements/transportation home prior to the wedding.",
     "hotels": "Here are the available hotels closeby:",
     "onfoot": "on foot",
-    "drinkanddrive": "Do not drink and drive! Eat, drink and be merry and then",
-    "taxi": "call a taxi",
+    "drinkanddrive": "Do not drink and drive! Eat, drink and be merry: ",
+    "taxi": "taxi étoile",
     "pictures": "We want to remember this day, so please share your pictures (even the crazy ones) with us. Upload them",
     "here": "here",
     "to-be-confirmed": "Reception to be confirmed. We await the next Covid restrictions announcement..."
@@ -261,8 +258,8 @@ h5 {
     "description": "Nous profiterons d’un repas et d’une soirée fun ensemble. Au niveau vestimentaire, mettez-vous à l’aise pour pouvoir danser! Le restaurant ferme à 3h du matin et il n’y a pas de chambres sur place. Il faudra organiser votre hébergement et transport avant le mariage.",
     "hotels": "Voici les hotels les plus proches:",
     "onfoot": "à pied",
-    "drinkanddrive": "Pas de risque, pas d’accident. Ne prenez pas le volant et",
-    "taxi": "appelez un taxi",
+    "drinkanddrive": "Pas de risque, pas d’accident. Ne prenez pas le volant: ",
+    "taxi": "taxi étoile",
     "pictures": "On veut un max de souvenirs de cette journée alors vous pouvez partager vos photos (même les photos un peu folles/ratées) avec",
     "here": "ce lien",
     "to-be-confirmed": "Réception à confirmer suivant les prochaines mesures sanitaires..."

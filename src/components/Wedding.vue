@@ -167,7 +167,7 @@ export default {
     },
   "fr": {
     "wedding": "Mariage",
-    "description": "Après la cérémonie religieuse, il y aura un verre et quelques amuses-bouches."
+    "description": "Après la cérémonie religieuse, il y aura un verre et quelques amuse-bouches."
   }
 }
 </i18n>
