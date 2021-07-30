@@ -182,10 +182,16 @@
       <a href="tel:+41269122121">{{ $t('taxi') }}</a
       >.
     </p>
-    <p v-scroll-reveal>
-      {{ $t('pictures') }} <a href="https://www.dropbox.com/request/ozAMX4C6cXd6eg6CUhUA" target="_blank">{{ $t('here') }}</a
-      >.
-    </p>
+    <h4 v-scroll-reveal>Photos</h4>
+    <p v-scroll-reveal>{{ $t('pictures') }}</p>
+    <!-- <p v-scroll-reveal>{{ $t('easy-steps') }}</p> -->
+    <ul v-scroll-reveal class="share-links">
+      <li>
+        {{ $t('whatsapp') }} <a href="https://chat.whatsapp.com/F6R2VqExlWFJpvBi10LxEo">{{ $t('whatsapp-group') }}</a>
+      </li>
+      <li>{{ $t('dropbox') }}</li>
+      <li>{{ $t('by-sending') }} <a href="mailto:kimberly.waelti@gmail.com">email</a></li>
+    </ul>
   </div>
 </template>
 
@@ -209,6 +215,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.share-links {
+  li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-position: 0 9px;
+  }
+}
 .warning {
   background-color: #d24679;
   box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
@@ -245,7 +258,11 @@ h5 {
     "onfoot": "on foot",
     "drinkanddrive": "Do not drink and drive! Eat, drink and be merry: ",
     "taxi": "taxi étoile",
-    "pictures": "We want to remember this day, so please share your pictures (even the crazy ones) with us. Upload them",
+    "pictures": "We want to remember this day, so please share your pictures (even the crazy ones) with us. Here are some ways for you to share them, choose whichever one is easiest for you:",
+    "whatsapp": "via this whatsapp ",
+    "whatsapp-group": "group link",
+    "dropbox": "by creating your Dropbox or Google photos album, and sharing it with kimberly.waelti@gmail.com",
+    "by-sending": "or by sending them direction by",
     "here": "here",
     "to-be-confirmed": "Reception to be confirmed. We await the next Covid restrictions announcement..."
     },
@@ -260,7 +277,11 @@ h5 {
     "onfoot": "à pied",
     "drinkanddrive": "Pas de risque, pas d’accident. Ne prenez pas le volant: ",
     "taxi": "taxi étoile",
-    "pictures": "On veut un max de souvenirs de cette journée alors vous pouvez partager vos photos (même les photos un peu folles/ratées) avec",
+    "pictures": "On veut un max de souvenirs de cette journée alors pouvez-vous svp partager avec nous vos photos (même les photos un peu folles/ratées). Choisissez ce qui vous fait plaisir:",
+    "whatsapp": "via ce",
+    "whatsapp-group": "group whatsapp",
+    "dropbox": "en créant un dossier Dropbox ou Google photos, puis en le partageant avec kimberly.waelti@gmail.com",
+    "by-sending": "ou en les envoyant directement par",
     "here": "ce lien",
     "to-be-confirmed": "Réception à confirmer suivant les prochaines mesures sanitaires..."
   }
