@@ -1,11 +1,21 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <!-- <IntroPlaceholder /> -->
-      <Intro />
-      <Wedding />
-      <Reception />
-      <Bottom />
+      <a href="https://photos.app.goo.gl/MHjXnHdrkJzq3qqJ9">
+        <div class="google-photos">
+          <img src="https://res.cloudinary.com/dljgq8ek2/image/upload/w_500,f_auto,dpr_2/kim-julien/wedding-pic.jpg" alt="wedding pictures" />
+          <div class="label">
+            <svg height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg">
+              <g id="f4748239-bdea-4aa0-9d39-98488d7cccce" data-name="Link-External">
+                <path
+                  d="m27 30h-24a1 1 0 0 1 -1-1v-24a1 1 0 0 1 1-1h16a1 1 0 0 1 0 2h-15v22h22v-15a1 1 0 0 1 2 0v16a1 1 0 0 1 -1 1zm2-28h-6a1 1 0 0 0 0 2h3.58l-11.29 11.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l11.29-11.3v3.64a1 1 0 0 0 2 0v-6.05a1 1 0 0 0 -1-1z"
+                />
+              </g>
+            </svg>
+          </div>
+          <Intro />
+        </div>
+      </a>
     </div>
     <div class="bg-image"></div>
     <div id="mediaqueries"></div>
@@ -13,22 +23,14 @@
 </template>
 
 <script>
-// import IntroPlaceholder from './components/IntroPlaceholder.vue';
 import Intro from './components/Intro.vue';
-import Wedding from './components/Wedding.vue';
-import Reception from './components/Reception.vue';
-import Bottom from './components/Bottom.vue';
 import imageSizes from '@/mixins/imageSizes';
 
 export default {
   name: 'app',
   mixins: [imageSizes],
   components: {
-    // IntroPlaceholder,
     Intro,
-    Wedding,
-    Reception,
-    Bottom,
   },
   mounted() {
     this.getBGImage('.bg-image', 'flowers.jpg');
@@ -44,6 +46,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: $black;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
 }
 .bg-image {
   position: fixed;
@@ -53,16 +60,8 @@ export default {
   left: 0;
   right: 0;
   background-size: cover;
-  @include sm {
-    display: none;
-  }
 }
 .wrapper {
-  max-width: 1240px;
-  padding: 40px 100px;
-  margin: 0 auto 50px auto;
-  background-color: rgba(255, 255, 255, 0.97);
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
   @include lg {
     max-width: 85%;
   }
@@ -71,64 +70,85 @@ export default {
     padding: 40px 60px;
   }
   @include sm {
-    max-width: none;
-    padding: 20px;
+    padding: 20px 0px;
   }
 }
-.allsaints-img,
-.colombette-img {
-  height: 400px;
-  background-size: cover;
-  background-position: center center;
-  margin-bottom: 30px;
-  @include lg {
-    height: 300px;
-  }
-  @include xs {
-    height: 250px;
-  }
-}
-.infos {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  div {
-    display: flex;
-    justify-content: space-between;
-    width: 55%;
-    @include md {
-      width: 60%;
-    }
+.google-photos {
+  padding: 30px;
+  background-color: white;
+  img {
+    height: 500px;
+    width: 500px;
+    transition: all 0.3s ease;
     @include sm {
-      width: auto;
-      flex-direction: column;
+      width: 100%;
+      height: auto;
     }
   }
+}
+a {
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: block;
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+  position: relative;
+  &:hover {
+    transform: rotate(2deg) scale(1.1);
+    img {
+      filter: sepia(0.3);
+    }
+    &::before {
+      animation: shine 0.75s;
+    }
+    .label {
+      transform: scale(1.1);
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    transform: skewX(-25deg);
+  }
+  @include sm {
+    transform: rotate(0);
+  }
   @include xs {
-    flex-direction: column;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
   }
 }
-.time,
-.parking {
-  padding-left: 30px;
-  background-size: 20px 20px;
-  background-position: 1px 50%;
-  background-repeat: no-repeat;
-  margin-bottom: 0;
-}
-.time {
-  background-image: url('./assets/clock.svg');
-}
-.parking {
-  background-image: url('./assets/parking.svg');
-}
-.gmap {
-  display: flex;
-  align-items: center;
+.label {
+  position: absolute;
+  bottom: 120px;
+  right: 45px;
+  transition: all 0.3s ease;
   svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    path {
+      fill: white;
+    }
+  }
+  @include sm {
+    bottom: 170px;
+  }
+  @include xs {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
   }
 }
 #mediaqueries {
